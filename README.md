@@ -22,7 +22,7 @@ This Google Apps Script project allows you to create a search bar functionality 
 2. Click on "Extensions" > "Apps Script."
 3. Paste the provided Google Apps Script code into the script editor (Page.html and Code.gs).
 4. Save the project.
-![Alt Text]([Image URL](https://github.com/itsmmrd/Google-Sites-Search-Bar/blob/main/screen.jpg))
+![Alt Text]([https://github.com/itsmmrd/Google-Sites-Search-Bar/blob/main/screen.jpg])
 
 ### Usage in Google Sheets
 
