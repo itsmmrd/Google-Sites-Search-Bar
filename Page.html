@@ -1,60 +1,52 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2759
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      body {
+        text-align: center;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input {
+        width: 80%;
+        margin-bottom: 15px;
+        padding: 8px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="searchInput">Enter value to search:</label>
+    <input type="text" id="searchInput">
+    <br>
+    <button onclick="search()">Search</button>
+    <br>
+    <div id="result"></div>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html>\
-  <head>\
-    <base target="_top">\
-    <style>\
-      body \{\
-        text-align: center;\
-        padding: 20px;\
-      \}\
-      label \{\
-        display: block;\
-        margin-bottom: 10px;\
-      \}\
-      input \{\
-        width: 80%;\
-        margin-bottom: 15px;\
-        padding: 8px;\
-      \}\
-      button \{\
-        padding: 10px 20px;\
-        background-color: #4CAF50;\
-        color: white;\
-        border: none;\
-        border-radius: 4px;\
-        cursor: pointer;\
-      \}\
-      #result \{\
-        margin-top: 20px;\
-        font-weight: bold;\
-      \}\
-    </style>\
-  </head>\
-  <body>\
-    <label for="searchInput">Enter value to search:</label>\
-    <input type="text" id="searchInput">\
-    <br>\
-    <button onclick="search()">Search</button>\
-    <br>\
-    <div id="result"></div>\
-\
-    <script>\
-      function search() \{\
-        var value = document.getElementById('searchInput').value;\
-        google.script.run.withSuccessHandler(displayResult).searchValue(value);\
-      \}\
-\
-      function displayResult(result) \{\
-        document.getElementById('result').innerHTML = 'Result: ' + result;\
-      \}\
-    </script>\
-  </body>\
-</html>\
-}
+    <script>
+      function search() {
+        var value = document.getElementById('searchInput').value;
+        google.script.run.withSuccessHandler(displayResult).searchValue(value);
+      }
+
+      function displayResult(result) {
+        document.getElementById('result').innerHTML = 'Result: ' + result;
+      }
+    </script>
+  </body>
+</html>
